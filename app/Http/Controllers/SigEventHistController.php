@@ -19,6 +19,17 @@ class SigEventHistController extends Controller
             'max-power' => $maxsigpwr,
             'sigevent-history' => $sigeventhist
         ];
-        return response()->json($data);
+
+        if($data){
+            return response()->json([
+                'message'=>'success',
+                'data'=>$data
+            ],200);
+        }
+        else{
+            return response()->json([
+                'message'=>'data not found',
+            ],464);
+        }
     }
 }
