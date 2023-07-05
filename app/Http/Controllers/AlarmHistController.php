@@ -13,8 +13,18 @@ class AlarmHistController extends Controller
 
     public function alarm_hist(){
         $alarmhist = AlarmHist::select('alarm_hist_idx','ne_type','log_time','issue_time','alarm_id','status','rt_sn')->get();
+        if($alarmhist){
+            return response()->json([
+                'message'=>'success',
+                'data'=>$alarmhist
+            ],200);
+        }
+        else{
+            return response()->json([
+                'message'=>'data not found',
+            ],464);
+        }
 
-        return response()->json($alarmhist);
     }
 
 

@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AlarmHist extends Model
+class MgmtGroup extends Model
 {
     use HasFactory;
-    protected $table = 'TBL_ALARM_HIST';
+    protected $table = 'TBL_MGMT_GROUP_TREE';
 }

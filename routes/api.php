@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AlarmHistController;
+use App\Http\Controllers\MgmtGroupController;
+use App\Http\Controllers\RtInfoController;
 use App\Http\Controllers\SigEventHistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('alarm-hist',[AlarmHistController::class,'alarm_hist']);
 Route::get('alarm-stat',[AlarmHistController::class,'alarm_stat']);
 Route::get('sigevent-hist',[SigEventHistController::class,'sigeventhist']);
+Route::get('rt-info',[RtInfoController::class,'info']);
+Route::get('mgmt-group',[MgmtGroupController::class,'mgmt']);
