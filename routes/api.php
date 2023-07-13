@@ -27,3 +27,5 @@ Route::get('alarm-stat',[AlarmHistController::class,'alarm_stat']);
 Route::get('sigevent-hist',[SigEventHistController::class,'sigeventhist']);
 Route::get('rt-info',[RtInfoController::class,'info']);
 Route::get('mgmt-group',[MgmtGroupController::class,'mgmt']);
+
+Route::post('/send-alarm-data', [AlarmHistController::class, 'sendAlarmData']);
