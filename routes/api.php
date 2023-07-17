@@ -22,10 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('alarm-hist',[AlarmHistController::class,'alarm_hist']);
-Route::get('alarm-stat',[AlarmHistController::class,'alarm_stat']);
-Route::get('sigevent-hist',[SigEventHistController::class,'sigeventhist']);
-Route::get('rt-info',[RtInfoController::class,'info']);
-Route::get('mgmt-group',[MgmtGroupController::class,'mgmt']);
-
 Route::post('/send-alarm-data', [AlarmHistController::class, 'sendAlarmData']);
+Route::post('/send-mgmt', [AlarmHistController::class, 'sendMgmt']);
+Route::post('/send-rt-info', [AlarmHistController::class, 'sendRtInfo']);
+Route::post('/send-event', [AlarmHistController::class, 'sendEventHist']);
+
+
