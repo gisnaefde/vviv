@@ -29,3 +29,4 @@ Route::post('/send-rt-info', [AlarmHistController::class, 'sendRtInfo']);
 Route::post('/send-event', [EventController::class, 'sendEventHist']);
 Route::post('/send-event-2', [EventController::class, 'sendEventHist2']);
 
+
