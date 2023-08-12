@@ -2,8 +2,9 @@
 
 use App\Http\Controllers\AlarmHistController;
 use App\Http\Controllers\MgmtGroupController;
-use App\Http\Controllers\RtInfoController;
+use App\Http\Controllers\RtinfoController;
 use App\Http\Controllers\SigEventHistController;
+use App\Http\Controllers\EventController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/send-alarm-data', [AlarmHistController::class, 'sendAlarmData']);
 Route::post('/send-mgmt', [AlarmHistController::class, 'sendMgmt']);
 Route::post('/send-rt-info', [AlarmHistController::class, 'sendRtInfo']);
-Route::post('/send-event', [AlarmHistController::class, 'sendEventHist']);
+Route::post('/send-event', [EventController::class, 'sendEventHist']);
+Route::post('/send-event-2', [EventController::class, 'sendEventHist2']);
+Route::post('/send-event-3', [EventController::class, 'sendEventHist3']);
+Route::post('/send-event-4', [EventController::class, 'sendEventHist4']);
+Route::post('/send-event-5', [EventController::class, 'sendEventHist5']);
 
 
